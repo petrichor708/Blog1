@@ -1,0 +1,20 @@
+spring:
+
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf-8
+        username: root
+        password:
+    jpa:
+      hibernate:
+#          保持实体类和数据库表结构一致
+          ddl-auto: none
+#          输出sql日志信息到控制台
+        show-sql: true
+    logging:
+        level:
+            root: warn
+            com.lala: info
+        file: log/blog-pro.log
+server:
+    port: 8081
